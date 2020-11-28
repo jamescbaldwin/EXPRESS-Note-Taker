@@ -1,5 +1,6 @@
 //path dependency enables us to get correct file for our html
 var path = require("path");
+var fs = require("fs");
 
 module.exports = function(app) {
     //html GET requests
