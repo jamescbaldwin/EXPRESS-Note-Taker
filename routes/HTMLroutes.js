@@ -5,10 +5,10 @@ module.exports = function(app) {
     //html GET requests
     //when users "vist" a page
     app.get('/notes', function(req, res) {
-        res.sendFile(path.join(_dirname, "../public/notes.html"));
+        res.sendFile(path.join(__dirname, "../public/notes.html"));
     });
     //if no matching route is found, we default to home page
     app.get("*", function(req, res) {
-        res.sendFile(path.join(_dirname, "../public/index.html"));
+        res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 };
