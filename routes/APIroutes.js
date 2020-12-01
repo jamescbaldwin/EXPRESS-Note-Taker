@@ -2,7 +2,7 @@ var db = require("../db/db.json");
 var fs = require("fs");
 
 //Routing
-module.exports = function (app) {
+module.export = function (app) {
     app.get("api/notes", function (req, res) {
         noteList = JSON.parse(fs.readFileSync('./db/db.json'))
         res.json(db);
