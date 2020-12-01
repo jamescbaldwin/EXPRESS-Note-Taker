@@ -3,12 +3,12 @@ var fs = require("fs");
 
 //Routing
 module.exports = function (app) {
-    app.get("api/notes", function (req, res) {
+    app.get("/api/notes", function (req, res) {
         noteList = JSON.parse(fs.readFileSync('./db/db.json'))
         res.json(db);
     });
 
-    app.post("api/notes", function (req, res) {
+    app.post("/api/notes", function (req, res) {
         db.push(req.body);
         db.forEach((obj, i) => {
             obj.id = i +1
