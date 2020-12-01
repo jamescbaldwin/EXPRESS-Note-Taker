@@ -14,7 +14,7 @@ module.exports = function (app) {
             obj.id = i +1
         });
 
-        fs.writeFile("./db./db.json", JSON.stringify(db), function () {
+        fs.writeFile("./db/db.json", JSON.stringify(db), function () {
             res.json(db);
         });
     });
